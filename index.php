@@ -479,7 +479,7 @@ function process_insight_three() {
       <li>What is possible using the charting libraries I've chosen is incredible given enough time, but probably not on par with paid software like Tableau or Power BI, <i>(which I would choose for something like this)</i>.</li>
       <li>While an API that connects into this data source can be useful for some of the smaller datasets <i>(e.g. Insight 2 with 600 rows)</i>, for this data to be useful long-term it should be storied locally in a big data environment - or at a minimum - scraped from the web and stored in a SQL database that we could query locally, as this would allow for much deeper levels of analytics that were not built here <i>(e.g. Insight 1 with 1m+ rows)</i>.  A live API feed that would require being hit multiple times for a single query is just too slow, and the API itself has very limited capabilities outside of returning raw data.</li>
       <li>Given the constraints of this example, it is difficult for me to provide <i>meaningful</i> information that would allow any real improvements or optimizations to occur.</li>
-      <li>In a real business context, there would be <b>far</b> more options to allow users to:
+      <li>In a real business context, the primary purpose of something like this would be to <b>empower users</b> on their end and allow them the flexibility to <i>find meaningful data</i> themselves without having to come to IT. There would be <b>far</b> more options to allow users to:
       <ul>
         <li>query (grouping, filtering, SQL-esque type choices</li>
         <li>format (which fields do <b>you</b> want to see?)</li>
