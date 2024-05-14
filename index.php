@@ -406,6 +406,7 @@ myChart = new Chart(ctx, {
         },
         {
           label: 'Avg. Fine Amount per quarter',
+          hidden: true,
           data: insight_two.map(row=>row.fines_amount),
           backgroundColor :
           [
@@ -415,6 +416,7 @@ myChart = new Chart(ctx, {
         },
         {
           label: 'Avg. Number of Fines per quarter',
+          hidden: true,
           data: insight_two.map(row=>row.fines_count),
           backgroundColor :
           [
@@ -424,6 +426,7 @@ myChart = new Chart(ctx, {
         },
         {
           label: 'Avg. Staff Rating',
+          hidden: true,
           data: insight_two.map(row=>row.staffing),
           backgroundColor :
           [
@@ -461,15 +464,25 @@ myChart = new Chart(ctx, {
 
 function process_insight_three() {
 
+  $('#insight_one, #insight_two, #insight_three').addClass('insight--deselected');
+  $('#insight_three').removeClass('insight--deselected');
+  $(".insight_quote").text("...my thoughts on all of this...");
+
   insight_three = `
 
     <h2>Honest Thoughts</h2>
+    <h3>Regarding the prompt</h3>
     <ul>
       <li>The goal set forth by the leadership team is for us to help provide insights that allow them to improve/optimize their Nursing Staffing in meaningful ways</li>
 
-      <li>The data available through data.cms.gov is amazing, vast, and incredibly pertinant to directors and administrators of nursing facilities.  My intent here was to showcase a few very simple ways that data could be pulled via live API and then analyzed.  In these cases, that analysis was Ensign data vs. all other companies. </li>
-      <li>While an API that connects into this data source can be useful for some of the smaller datasets <i>(Insight 2 with 600 rows)</i>, for this data to be useful long-term it should be storied locally in a big data environment, which would allow for much deeper levels of analytics that were not built here <i>(Insight 1 with 1m+ rows)</i>.  A live API feed that would require being hit multiple times for a single query is just too slow, and the API itself has very limited capabilities outside of returning raw data. </li>
+      <li>The data available through data.cms.gov is amazing, vast, and incredibly pertinant to directors and administrators of nursing facilities.  My intent here was to showcase a few very simple ways that data <i>could</i> be pulled via live API and then analyzed. For both of my "Insights", I brought in raw data, grouped the data into Ensign vs. everyone else arrays, and then displayed them to the user using chart.js.</li>
+      <li>What is possible using the charting libraries I've chosen is incredible given enough time, but probably not on par with paid software like Tableau or Power BI, <i>(which I would choose for something like this)</i>.</li>
+      <li>While an API that connects into this data source can be useful for some of the smaller datasets <i>(e.g. Insight 2 with 600 rows)</i>, for this data to be useful long-term it should be storied locally in a big data environment - or at a minimum - scraped from the web and stored in a SQL database that we could query locally, as this would allow for much deeper levels of analytics that were not built here <i>(e.g. Insight 1 with 1m+ rows)</i>.  A live API feed that would require being hit multiple times for a single query is just too slow, and the API itself has very limited capabilities outside of returning raw data.</li>
+      <li>Given the constraints of this example, it is difficult for me to provide <i>meaningful</i> information that would allow any real improvements or optimizations to occur.</li>
+    </ul>
 
+    <h3>Regarding the data</h3>
+    <ul>
       <li>Without understanding the ins and outs of the process, it appears that on average, Ensign's facilities acheive a higher rating than all of our competitors put together - and by quite a decent margin in certain cases. </li>
       <li>As a potential employee, this warms my heart.  Ensign appears to walk the walk.</li>
         <ul>
