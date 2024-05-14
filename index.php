@@ -10,8 +10,8 @@
 
   <div class="top_header">
     <div class="left_header">
-      <div class="left_header_title">Ensign Insights</div>
-      <div class="left_header_subtitle"><img class="ensights" src="img/ensights.png" /></div>
+      <div class="left_header_title"><img class="ensights" src="img/ensights.png" /></div>
+      <div class="left_header_subtitle">Insights for Ensign Leaders</div>
     </div>
     <div class="right_header">
       <div class="left_header_item"></div>
