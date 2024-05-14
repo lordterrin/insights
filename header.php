@@ -39,5 +39,5 @@
 
     <link rel="stylesheet" href="css/legion_mobile.css?v=<?php echo rand() ?>" media="only screen and (max-device-width: 500px)" />
 
-    <title>Legion TD Guide 2</title>
+    <title>Ensign Insights</title>
   </head>
