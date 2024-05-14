@@ -37,7 +37,5 @@
     <!-- legion css -->
     <link rel="stylesheet" href="css/legion.css?v=<?php echo rand() ?>" />
 
-    <link rel="stylesheet" href="css/legion_mobile.css?v=<?php echo rand() ?>" media="only screen and (max-device-width: 500px)" />
-
     <title>Ensign Insights</title>
   </head>
